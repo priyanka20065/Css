@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: beige;
+          
+            border: 2px solid black;
+            
+            width:50vw;
+        }
+        .box{
+            background-color: aquamarine;
+            width: 350px;
+            height: 80px;
+            border: 1px solid brown;
+            margin: 5px;
+            padding: 5px;
+            animation-name: rightmovement;
+            animation-duration: 5s;
+            animation-iteration-count: 2;
+            animation-delay: 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes rightmovement{
+           from{
+               top:0;
+                left:0;
+           }
+           to{
+             top:0;
+             left:1200px;
+           }
+        }
+    </style>
+</head>
+<body>
+    <!-- jab ik element ik state se dosri state me chala jata hai to usko animate krne ko animation kehte hai. -->
+    <div class="container">
+       <div class="box"></div>
+    </div>
+</body>
+</html>
+
+
+The animation-direction property specifies whether an animation should be played forwards, backwards or in alternate cycles.
+
+The animation-direction property can have the following values:
+
+normal - The animation is played as normal (forwards). This is default
+reverse - The animation is played in reverse direction (backwards)
+alternate - The animation is played forwards first, then backwards
+alternate-reverse - The animation is played backwards first, then forwards
+
+
+
+The animation-timing-function property specifies the speed curve of the animation.
+
+The animation-timing-function property can have the following values:
+
+ease - Specifies an animation with a slow start, then fast, then end slowly (this is default)
+linear - Specifies an animation with the same speed from start to end
+ease-in - Specifies an animation with a slow start
+ease-out - Specifies an animation with a slow end
+ease-in-out - Specifies an animation with a slow start and end
+cubic-bezier(n,n,n,n) - Lets you define your own values in a cubic-bezier function
+
+
+
+fill-mode property is used to specify the style of the element before and after the animation. It can have the following values:
+none - Default value. The element will not retain the style from the animation
+forwards - The element will retain the style from the last keyframe
+backwards - The element will retain the style from the first keyframe
+both - The element will retain the style from the first keyframe and the last keyframe
+
+
+short hand property for animation is: animation: name duration timing-function delay iteration-count direction fill-mode play-state;     

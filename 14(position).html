@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            border: 1px solid black;
+        }
+        img{
+            margin: 10px;
+        }
+        .image2 {
+            /* position: relative;
+            top: 100px;
+            left: 200px; */
+
+            /* position: absolute;
+            top: 100px; */
+            /* position: absolute;
+            top: 100px; */
+        }
+        .container{
+            position: relative;
+            height: 8000px;
+            background-color: beige;
+        }
+        .image4{
+            position: fixed;
+        }
+        .image3{
+            position: sticky;
+            top: 100px;
+        }
+        .box{
+            background-color: aquamarine;
+            height: 5000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <img
+            src="sup1.JPG"
+            alt="poster 1"
+            width="300px"
+            height="300px"
+            class="image1"
+        />
+
+        <img
+            src="sup2.JPG"
+            alt="poster 2"
+            width="300px"
+            height="300px"
+            class="image2"
+        />
+
+        <img
+            src="sup3.JPG"
+            alt="poster 3"
+            width="300px"
+            height="300px"
+            class="image3"
+        />
+
+        <img
+            src="sup4.JPG"
+            alt="poster 4"
+            width="300px"
+            height="300px"
+            class="image4"
+        />
+
+
+    </div>
+    <div class="box">
+
+    </div>
+</body>
+</html>
+
+
+by deault sab static hote h 
+agar hum kisi bhi image ko move karna chahte h to uske liye hume position property ka use karna padega
+position property ke 4 values hote h
+1. static
+2. relative
+3. absolute
+4. fixed
+5. sticky
+static->this is the default value of position property
+
+relative->relative position is used to move an element relative to its normal position.ismain top,left,right,bottom property ka use hota h
+and ik kisi ko move kiya h toh uska space wahi rehta h
+
+absolute->absolute position is used to move an element relative to its parent element.ismain top,left,right,bottom property ka use hota h and agar kisi ko move kiya h toh uska space waha se chala jata h.overlapping hoti h
+
+fixed->fixed position is used to move an element relative to the browser window or the viewport .it does not move when the window is scrolled
+sticky->sticky position is used to move an element relative to its parent element until it reaches a certain point and then it stays fixed.we have to use top,left,right,bottom property to set the point where the element should stick
+
+

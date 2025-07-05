@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary-color: brown;
+            --custom-width: 330px;
+        }
+        .container{
+            background-color:beige;
+            height: 650px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+           
+            background-color: aquamarine;
+            width: var(--custom-width);
+            height: 330px;
+            border: 1px solid var(--primary-color);
+            margin: 5px;
+            padding: 5px;
+            
+            
+
+
+            /* box-shadow: -10px -60px var(--primary-color); */
+            
+            /* box-shadow: 10px 15px 50px brown;
+             */
+            /* box-shadow: 10px 15px 5px 100px rgba(78, 158, 211, 0.7); */
+            /* box-shadow: inset 10px 15px brown; */
+            /* box-shadow: 10px 15px red, 15px 8px green; */
+        }
+        #head1{
+            /* text-shadow: 12px 13px 1px white;
+             */
+            /* text-shadow: yellow 12px 13px 2px; */
+            /* text-shadow: white 12px 13px;
+             */
+            /* text-shadow: 12px 13px;
+             */
+            /* HW - multiple text shadows add krni h ek text pr  */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box">
+            <img src="logo.svg" />
+            <h2 id="head1">Welcome to CodeHelp</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ratione a quibusdam? Animi atque iste aliquam pariatur laboriosam quisquam placeat, facere voluptates necessitatibus, vitae saepe!</p>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+
+box-shadow property is used to add shadow to an element. It takes 5 values:
+1. Horizontal shadow
+2. Vertical shadow
+3. Blur radius
+4. Spread radius
+5. Color
+box-shadow: 10px 15px 50px brown;
+agar first element -ve h to left side m jayega, agar second element -ve h to upar jayega and for third -ve will nt work
+
+box-shadow:inset 10px 15px brown;
+inset keyword is used to add shadow inside the element
+
+multiple shadows:
+box-shadow: 10px 15px red, 15px 8px green;
+
+
+text-shadow property is used to add shadow to text. It takes 4 values:
+1. Horizontal shadow
+2. Vertical shadow
+3. Blur radius
+4. Color
+text-shadow: 12px 13px 1px white;
+text-shadow: yellow 12px 13px 2px;
+text-shadow: white 12px 13px;
+text-shadow: 12px 13px;
+by default blur radius is 0px and color is black
+HW - multiple text shadows add krni h ek text pr
+
+
+--primary-color: brown;
+--custom-width: 330px;
+these are custom properties. We can use these properties in our css file. We can change the value of these properties in one place and it will be reflected in all the places where these properties are used.
+when we have to use this then we can simply write var(--primary-color) instead of writing brown.
+
+we can define them in :root selector. :root selector is used to define global css variables. It is used to define variables that can be used in the whole document.
+
+:root{
+    --primary-color: brown;
+    --custom-width: 330px;
+}

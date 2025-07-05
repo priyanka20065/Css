@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple selectors:</title>
+    <style>
+        /* 1. Universal Selector: */
+
+*{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* 2. Id selector: */
+
+#fruits{
+    color: red;
+    border: 2px dotted green;
+}
+
+/* 3. Class Selector: */
+
+.a1{
+    color: green;
+    text-decoration: line-through;
+    font-weight: 800;
+}
+
+/* 4. element selector: */
+
+p{
+    background-color: pink;
+}
+
+/* attribute selector: */
+
+input[type="text"]{
+    background-color: orange;
+}
+
+[type="password"]{
+    background-color: green;
+}
+
+[placeholder="email"]{
+    background-color: pink;
+} 
+
+<!-- h2+p means that the style is applied to only element of p if there are more p after tahat it will not apply to that  and it is known as adjacent selector . and h p h1 is desends and  -->   attribute selector is used to select the element based on the attribute and value of that attribute.   and a[href *= "google"] and it the word end with com then use $ an dif it start then use ^-->
+    </style>
+</head>
+
+<body>
+    <h1>Learning Simple selectors in CSS:</h1>
+
+    <br>
+    <input type="text">
+    <br>
+    <br>
+    <input type="password">
+    <br>
+
+    <br>
+    <br>
+    <input type="email" placeholder="email">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptatum laboriosam, consequuntur ipsam ducimus
+        libero quas esse possimus impedit deleniti.</p>
+
+    <h3 id="fruits">Favourite fruits:</h3>
+    <ul>
+        <li class="a1">Apple</li>
+        <li>Bananas</li>
+        <li class="a1">Grapes</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam omnis nulla autem quae enim veritatis! Beatae
+        architecto cumque consequatur aliquam.</p>
+</body>
+
+</html>     <!-- color         hex fff u will get grey   ffffff u will get white and 000000 u will get black -->
+
+
+/*inline style attribute > id select > class selector > element selector > universal selector
+   and if we have given important to any style then it will be applied first and it will override all the other styles.   and we can write important so there specifty increases .
+
+   //how to calculate the specificity of a selector:
+   1how many inline styles are there in the selector.
+    2. Count the number of ID selectors in the selector.
+    3. Count the number of class selectors in the selector.
+    4. Count the number of element selectors in the selector.
+
+
+    less the specificity more the style will be applied and more the specificity less the style will be applied.
+    and if we have given important to any style then it will be applied first and it will override all the other styles.   and we can write important so there specifty increases .

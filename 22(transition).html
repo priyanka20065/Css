@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .box{
+            height: 400px;
+            width: 400px;
+            background-color: beige;
+            border: 2px solid black;
+
+            /* transition-property: all;
+            transition-duration: 4s;
+            /* transition-delay: 1s; 
+            transition-timing-function: ease-out;
+            
+            */
+
+
+            /* shorthand notation */
+            /* transition: all 2s ease-in 5s;
+             */
+
+            transition: width 2s, height 5s;
+        }
+
+
+        .box:hover{
+            width: 1800px;
+            height: 900px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+
+    </div>
+    
+</body>
+</html>
+
+difference between animation and transition
+1. animation is used to change the state of an element from one state to another state.
+2. transition is used to change the property of an element from one state to another state.
+
+transition property:
+1. transition-property: specifies the name of the property that we want to change.
+transition-proprty:width->it changes the width of the element.
+transition-property:height->it changes the height of the element.
+transition-property:all-> it changes all the properties of the element.
+
+
+we have to use psudu class or hover to use transitoon
+
+transition-timing-function:
+ if we only write width and there is no smooth transitoion of color it will apear evuntally after after we click the box;
+
+
+
+

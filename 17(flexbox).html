@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: beige;
+            border: 5px solid black;
+            margin: 2px;
+            padding: 2px;
+            display: flex;
+            flex-direction: row;
+            height: 800px;
+            /* flex-wrap:wrap; */
+            justify-content: start;
+            align-items: start; 
+            align-content: center;
+        }
+        .box{
+            /* height: 200px;
+            width: 200px; */
+            border: 2px solid brown;
+            margin: 2px;
+            padding: 2px;
+        }
+        #box1{
+            background-color: aqua;
+            /* order: 500; */
+            /* flex-shrink: 4; */
+            /* flex-grow: 1; */
+            align-self: end;
+        }
+        #box2{
+            background-color: blue;
+            /* flex-grow: 1; */
+        }
+        #box3{
+            background-color: orange;
+            /* flex-grow: 1; */
+        }
+        #box4{
+            background-color: brown;
+            /* order: -1; */
+            /* flex-grow: 1; */
+            /* flex-basis: 400px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4</div>
+    </div>
+</body>
+</html>
+
+
+firast of all there is a flex container and then there are flex items.
+flex container is the parent of the flex items.
+by default horizontal direction me flex container hota h. and it is also called as main axis.
+and vertical direction me cross axis hota h.
+
+
+display:flex we use to make a container a flex container.
+
+by default flex direction is row.
+we can change direction by using flex-direction property.
+flex-direction: row-reverse; -> it will reverse the order of the items.321
+flex-direction: column; -> it will make the items in column.
+flex-direction: column-reverse; -> it will make the items in column and reverse the order of the items.
+
+flex-wrap:wrap; -> it will wrap the items in the container.if we have fixed item size and we want to wrap the items then we use this property. it will maintain that size till the end of the container.
+flex-wrap:wrap-reverse; -> it will wrap the items in the container and reverse the order of the items.
+flex-wrap:nowrap; -> it will not wrap the items in the container.
+
+shorthand nortation for flex-direction and flex-wrap is flex-flow.
+flex-flow: row wrap; -> it will make the items in row and wrap the items.
+
+justify-content property is used to align the items in the main axis.
+justify-content: flex-start; -> it will align the items to the start of the main axis.
+justify-content: flex-end; -> it will align the items to the end of the main axis.
+justify-content: center; -> it will align the items to the center of the main axis.
+justify-content: space-between; -> it will give equal space between the items.
+justify-content: space-around; -> it will give equal space around the items.
+justify-content: space-evenly; -> it will give equal space between the items and around the items.
+
+align-items property is used to align the items in the cross axis.
+align-items: flex-start; -> it will align the items to the start of the cross axis.
+align-items: flex-end; -> it will align the items to the end of the cross axis.
+align-items: center; -> it will align the items to the center of the cross axis.
+align-items: stretch; -> it will stretch the items to the end of the cross axis.
+
+align-content property is used to align the items in the cross axis when there are multiple rows.
+align-content: flex-start; -> it will align the items to the start of the cross axis.
+align-content: flex-end; -> it will align the items to the end of the cross axis.   
+align-content: center; -> it will align the items to the center of the cross axis.
+align-content: space-between; -> it will give equal space between the rows.
+align-content: space-around; -> it will give equal space around the rows.
+align-content: stretch; -> it will stretch the rows to the end of the cross axis.
+
+if flex direction is row the then align items will work in cross axis.and if flex direction is column then justify content will work in cross axis. and align items will work in main axis.
+
+these are the property for flex container.
+
+
+
+flex-grow property is used to grow the items.
+flex-grow: 1; -> it will grow the items equally.
+flex-grow: 2; -> it will grow the items twice.
+flex-grow: 0; -> it will not grow the items.
+
+
+order property is used to change the order of the items.
+order: 1; -> it will change the order of the items.
+order: -1; -> it will change the order of the items.
+order: 0; -> it will not change the order of the items.
+
+
+flex-shrink property is used to shrink the items. when we decrease the size of the container then the items will shrink fater than the other items.
+flex-shrink: 1; -> it will shrink the items equally.
+flex-shrink: 2; -> it will shrink the items twice.
+flex-shrink: 0; -> it will not shrink the items.
+
+
+flex-basis property is used to give the size to the items.
+flex-basis: 200px; -> it will give the size to the items.
+flex-basis: 50%; -> it will give the size to the items.
+flex-basis: auto; -> it will give the size to the items according to the content.
+
+flex property is the shorthand property for flex-grow, flex-shrink and flex-basis.
+flex: 1 1 200px; -> it will grow, shrink and give the size to the items.
+flex: 1 2 200px; -> it will grow twice, shrink twice and give the size to the items.
+flex: 1 0 200px; -> it will grow, not shrink and give the size to the items.
+
+
+align-self property is used to align the items in the cross axis.
+align-self: flex-start; -> it will align the items to the start of the cross axis.
+align-self: flex-end; -> it will align the items to the end of the cross axis.
+align-self: center; -> it will align the items to the center of the cross axis.
+align-self: stretch; -> it will stretch the items to the end of the cross axis.
+
+
+
+

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids - 2nd example</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(69, 62, 62);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4, 200px);
+    gap: 0.4rem;
+    padding: 4rem;
+    border: 2px solid white;
+    /* justify-items: end; */
+    /* align-items: stretch; */
+    place-items: center;
+}
+
+.item{
+    /* height: 50px;
+    width: 100px; */
+    background-color: rgb(49, 206, 14);
+    border: 5px solid rgb(217, 202, 202);
+    /* justify-self: stretch; */
+    /* align-self: stretch; */
+    /* place-self: stretch; */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            A
+        </div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">
+            A
+        </div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">
+            A
+        </div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS Grids in 1 Video</title>
+ <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(59, 57, 57);
+    display: grid;
+    padding: 4rem;
+    /* row-gap: 1rem;
+    column-gap: 1rem; */
+    gap: 1rem;
+    /* grid-template-rows: 1fr 1fr;
+     */
+    /* grid-template-rows: repeat(4,1fr);
+    /* grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: repeat(3,1fr); */
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);
+}
+
+.item{
+    background-color: rgb(94, 94, 194);
+    border: 5px solid black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 2.3rem; */
+}
+
+
+
+@media (min-width:768px) {
+    .container{
+        grid-template-rows: repeat(4,1fr);
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: repeat(3,1fr);
+    }
+    .header, .footer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    
+    .sidebar{
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    
+    .content1{
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+}
+ </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item content1">Content1</div>
+        <div class="item">Content2</div>
+        <div class="item">Content3</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html>
+
+
+grid is divided into row and column and we can place items in the grid
+grid-template-columns: repeat(3,1fr); 3 columns with equal width
+
+row-gap: 1rem; gap between rows
+
+grid-template-columns:100px 100px; 2 columns with 100px width
+grid-template-rows: repeat(4,1fr); 4 rows with equal height
+grid-template-columns: repeat(3,1fr); 3 columns with equal width
+
+fr is fractional unit which divides the space equally
+
+
+21:12, the solution for:- 
+display: inline-grid:
+1:- Imagine making a smaller grid, only as big as the content inside it.
+2:- It's like a tiny table that only takes up the space it needs.
+3:- The items inside follow the grid rules, but the whole thing behaves like a small inline element.
+
+The main difference is in how much space they take up. 
+display: grid acts like a big table, covering the whole width.
+display: inline-grid is like a small table that fits its content.
+
+grid-column-start:1:
+grid-column-end:4:
+grid-row-start:2:
+grid-row-end:4: means the item will start from row 2 and end at row 4
+
+
+read css-tricks
